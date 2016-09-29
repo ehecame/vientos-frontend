@@ -1,0 +1,144 @@
+@import 'bootstrap';
+@import 'font-awesome';
+@import 'style_utils';
+@import 'js_utils.scss';
+
+$color_primario: #38C12D;
+
+/* Menú */
+.navbar-nav {
+
+   li {
+      a {
+         padding: $spacing / 2 !important;
+      }
+   }
+}
+
+
+
+
+/* Inicio */
+
+
+#inicio-categorias {
+
+   .categoria {
+      text-align: center;
+      .circle {
+         background-color: $color_primario;
+
+         height: 100px;
+         width: 100px;
+         border-radius: 50px;
+         box-shadow: 5px 5px 5px #DDD;
+
+         margin-left: auto;
+         margin-right: auto;
+      }
+   }
+}
+
+
+
+
+
+/* Utilidades */
+
+.cortina-clara {
+   @extend .wh-100;
+   @extend .absUpL;
+   z-index: 1;
+   background-color: rgba(255,255,255,0.5);
+}
+
+
+.txshw {
+   text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+.icono {
+   -o-transition: -o-transform 0.3s ease-in-out;
+   -moz-transition: -moz-transform 0.3s ease-in-out;
+   -webkit-transition: -webkit-transform 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+
+   &:hover {
+      -o-transform: scale( 1.02 );
+      -moz-transform: scale( 1.02 );
+      -webkit-transform: scale( 1.02 );
+      transform: scale( 1.02 );
+   }
+}
+
+
+.tarjeta {
+   @extend .icono;
+   @extend .txshw,
+}
+
+/* Animaciones */
+
+
+
+#cargando .imagen {
+
+   &.imagen-girando {
+   webkit-animation-name: spin;
+
+    -webkit-animation-duration: 5000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 5000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 5000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: ease-in-out;
+
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+   }
+}
+
+
+#portada-logotipo {
+   .imagen {
+   webkit-animation-name: spin;
+
+    -webkit-animation-duration: 30000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 30000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 30000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: ease-in-out;
+
+    animation-name: spin;
+    animation-duration: 30000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+   }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
