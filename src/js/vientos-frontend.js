@@ -12,7 +12,6 @@ $(document).ready(function(){
    v.setup();
 
 
-
    if( $(window).width() < 768 ) {
       console.log("movil");
    }

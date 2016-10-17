@@ -28,9 +28,9 @@ $color_primario: #38C12D;
       .circle {
          background-color: $color_primario;
 
-         height: 100px;
-         width: 100px;
-         border-radius: 50px;
+         // height: 100px;
+         // width: 100px;
+         border-radius: 50%;
          box-shadow: 5px 5px 5px #DDD;
 
          margin-left: auto;
@@ -141,4 +141,31 @@ $color_primario: #38C12D;
 @keyframes spin {
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
+}
+
+
+$color_concepto_1: #ddeeff;
+$color_concepto_2: #daeeff;
+$color_concepto_3: #ddaeff;
+$color_concepto_4: #ddeeaf;
+$color_concepto_5: #daeafa;
+$color_concepto_6: #daeafa;
+
+.concepto-color-1 {
+   color: $color_concepto_1;
+}
+.concepto-color-2 {
+   color: $color_concepto_2;
+}
+.concepto-color-3 {
+   color: $color_concepto_3;
+}
+.concepto-color-4 {
+   color: $color_concepto_4;
+}
+.concepto-color-5 {
+   color: $color_concepto_5;
+}
+.concepto-color-6 {
+   color: $color_concepto_6;
 }
