@@ -2,6 +2,7 @@
 @import 'font-awesome';
 @import 'style_utils';
 @import 'js_utils.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
 
 $color_primario: #38C12D;
 
@@ -84,24 +85,24 @@ $color_primario: #38C12D;
 #cargando .imagen {
 
    &.imagen-girando {
-   webkit-animation-name: spin;
+      webkit-animation-name: spin;
 
-    -webkit-animation-duration: 5000ms;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-name: spin;
-    -moz-animation-duration: 5000ms;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: ease-in-out;
-    -ms-animation-name: spin;
-    -ms-animation-duration: 5000ms;
-    -ms-animation-iteration-count: infinite;
-    -ms-animation-timing-function: ease-in-out;
+      -webkit-animation-duration: 5000ms;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-name: spin;
+      -moz-animation-duration: 5000ms;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: ease-in-out;
+      -ms-animation-name: spin;
+      -ms-animation-duration: 5000ms;
+      -ms-animation-iteration-count: infinite;
+      -ms-animation-timing-function: ease-in-out;
 
-    animation-name: spin;
-    animation-duration: 5000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+      animation-name: spin;
+      animation-duration: 5000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
 
    }
 }
@@ -109,38 +110,39 @@ $color_primario: #38C12D;
 
 #portada-logotipo {
    .imagen {
-   webkit-animation-name: spin;
+      webkit-animation-name: spin;
 
-    -webkit-animation-duration: 30000ms;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-name: spin;
-    -moz-animation-duration: 30000ms;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: ease-in-out;
-    -ms-animation-name: spin;
-    -ms-animation-duration: 30000ms;
-    -ms-animation-iteration-count: infinite;
-    -ms-animation-timing-function: ease-in-out;
+      -webkit-animation-duration: 30000ms;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-name: spin;
+      -moz-animation-duration: 30000ms;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: ease-in-out;
+      -ms-animation-name: spin;
+      -ms-animation-duration: 30000ms;
+      -ms-animation-iteration-count: infinite;
+      -ms-animation-timing-function: ease-in-out;
 
-    animation-name: spin;
-    animation-duration: 30000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+      animation-name: spin;
+      animation-duration: 30000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
 
    }
 }
+
 @-moz-keyframes spin {
-    from { -moz-transform: rotate(0deg); }
-    to { -moz-transform: rotate(360deg); }
+   from { -moz-transform: rotate(0deg); }
+   to { -moz-transform: rotate(360deg); }
 }
 @-webkit-keyframes spin {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
+   from { -webkit-transform: rotate(0deg); }
+   to { -webkit-transform: rotate(360deg); }
 }
 @keyframes spin {
-    from {transform:rotate(0deg);}
-    to {transform:rotate(360deg);}
+   from {transform:rotate(0deg);}
+   to {transform:rotate(360deg);}
 }
 
 
@@ -168,4 +170,30 @@ $color_concepto_6: #daeafa;
 }
 .concepto-color-6 {
    color: $color_concepto_6;
+}
+
+
+
+.navbar-brand {
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+/* TIPOGRAFÍAS */
+
+.font-1 {
+   font-family: 'Lato', sans-serif;
+}
+.font-2 {
+   font-family: 'Montserrat', sans-serif;
+}
+
+
+* {
+   @extend .font-1;
+}
+
+h1,h2,h3,h4,h5,h6 {
+   @extend .font-1;
 }
