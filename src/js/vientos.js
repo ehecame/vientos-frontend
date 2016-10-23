@@ -1,9 +1,27 @@
+
+
 var lista_palabras_colaboracion = [
-   'Palabra','Palabra','Palabra','Palabra','Palabra',
-   'Palabra','Palabra','Palabra','Palabra','Palabra',
-   'Palabra','Palabra','Palabra','Palabra','Palabra',
-   'Palabra','Palabra','Palabra','Palabra','Palabra',
-   'Palabra','Palabra','Palabra','Palabra','Palabra',
+'Entérate',
+'Difunde',
+'Conocimientos',
+'Habilidades',
+'Trabajo Comunitario',
+'Materiales',
+'Herramientas',
+'Eventos',
+'Talleres',
+'Espacios',
+'Chambas',
+'Fondeo',
+'Productos',
+'Servicios',
+'Recomienda',
+'Vincula',
+'Comparte',
+'Construye',
+'Intercambia',
+'Asiste',
+'Cotorréate'
 ];
 
 function Vientos() {

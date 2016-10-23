@@ -24,8 +24,8 @@ function HexGrid() {
    this.defaultBreakpoint = {
       breakpoint: 0,
       settings: {
-         maxRowItems: 2,
-         spacing: 2
+         maxRowItems: 4,
+         spacing: 4
       }
    };
 
@@ -34,27 +34,27 @@ function HexGrid() {
          breakpoint: 320,
          settings: {
             maxRowItems: 4,
-            spacing: 2
+            spacing: 20
          }
       },
       {
          breakpoint: 640,
          settings: {
-            maxRowItems: 4,
+            maxRowItems: 7,
             spacing: 5
          }
       },
       {
          breakpoint: 960,
          settings: {
-            maxRowItems: 5,
+            maxRowItems: 9,
             spacing: 10
          }
       },
       {
          breakpoint: 1024,
          settings: {
-            maxRowItems: 9,
+            maxRowItems: 10,
             spacing: 25
          }
       },
@@ -201,7 +201,7 @@ console.log( $('.hex-grid').width() , maxW, maxW * settings.maxRowItems);
          hex.width( hexW ).height( hexW );
 
          hex.css({
-            marginTop: (( ( hexW / 2 ) / Math.sqrt(3) ) * -2) + settings.spacing,
+            marginBottom: (( ( hexW / 2 ) / Math.sqrt(3) ) * 1) + settings.spacing / 2,
             marginLeft: settings.spacing / 2,
             // marginRight: settings.spacing / 2
          });
@@ -223,10 +223,10 @@ console.log( $('.hex-grid').width() , maxW, maxW * settings.maxRowItems);
          });
 
          hex.find('.pre').css({
-            borderBottom: ( hexW / 2 ) / Math.sqrt(3) + "px solid #64C7CC",
+            borderBottom: ( hexW / 2 ) / Math.sqrt(3) + "px solid #38c12d",
          });
          hex.find('.post').css({
-            borderTop: ( hexW / 2 ) / Math.sqrt(3) + "px solid #64C7CC",
+            borderTop: ( hexW / 2 ) / Math.sqrt(3) + "px solid #38c12d",
          });
 
 
