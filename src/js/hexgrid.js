@@ -33,7 +33,7 @@ function HexGrid() {
       {
          breakpoint: 320,
          settings: {
-            maxRowItems: 3,
+            maxRowItems: 4,
             spacing: 2
          }
       },
@@ -201,7 +201,7 @@ console.log( $('.hex-grid').width() , maxW, maxW * settings.maxRowItems);
          hex.width( hexW ).height( hexW );
 
          hex.css({
-            marginTop: settings.spacing / 2,
+            marginTop: (( ( hexW / 2 ) / Math.sqrt(3) ) * -2) + settings.spacing,
             marginLeft: settings.spacing / 2,
             // marginRight: settings.spacing / 2
          });
@@ -240,7 +240,7 @@ console.log( $('.hex-grid').width() , maxW, maxW * settings.maxRowItems);
          margin-bottom: 100px;
          */
 
-         hex.find('.contents').html( hexgrid.contents[i] );
+         hex.find('.contents').html( $(hexgrid.contents[i]).width('90%').height('100%').css({margin:0, paddingLeft:0}) );
 
          lastRow.append( hex );
 
@@ -253,7 +253,7 @@ console.log( $('.hex-grid').width() , maxW, maxW * settings.maxRowItems);
       var offsetL = ( $('.hex-grid').width() - ( maxW * breakpoint.settings.maxRowItems ) );
 
       $('.hexagon-row').css({
-         marginTop: (parseInt( (maxW / 2) / Math.sqrt(3) ) * -(1/1.5)),
+         marginTop: (parseInt( (maxW / 2) / Math.sqrt(3) ) * -(1/1.5))*2,
          marginBottom: hexW / 2,
          marginLeft: (offsetL + hexW / 2) + breakpoint.settings.spacing/4,
          height: (hexW/2)-settings.spacing,

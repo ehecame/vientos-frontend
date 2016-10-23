@@ -35,8 +35,6 @@ function Vientos() {
       u.addWindowResizeFunction( u.squareH );
       u.addWindowResizeFunction( u.verticalCenter );
 
-      // this.hexgrid = new HexGrid();
-      // this.hexgrid.addContents( $('#inicio-colaboracion-palabras .palabra-colaboracion').detach() );
       u.verticalCenter();
 
 
@@ -84,6 +82,15 @@ function Vientos() {
 
       v.setup_menu_movil();
 
+      v.palabras_colaboracion(function(){
+            this.hexgrid = new HexGrid();
+            this.hexgrid.addContents( $('#inicio-colaboracion-palabras .palabra-colaboracion-contenedor:not(.hidden)').detach() );
+
+      });
+
+
+
+
    }
 
    this.windowScrolling = false;
@@ -103,8 +110,7 @@ function Vientos() {
                }
                if( u.isElementInView( $('html,body'), $('#inicio-colaboracion-palabras') ) ) {
 
-                  v.palabras_colaboracion();
-
+console.log("palabras animacion");
                }
 
                v.windowScrolling = false;
@@ -165,7 +171,7 @@ function Vientos() {
    }
 
 
-   this.palabras_colaboracion = function() {
+   this.palabras_colaboracion = function( callback ) {
 
       for (var i = 0; i < lista_palabras_colaboracion.length; i++) {
 
@@ -174,6 +180,8 @@ function Vientos() {
          .html( lista_palabras_colaboracion[i] )
 
       }
+
+      callback();
 
    }
 
