@@ -1,3 +1,10 @@
+var colores = [
+   '#38c12d',
+   '#48b12a',
+   '#28d136',
+   '#42B27F',
+   '#65B811',
+];
 //
 // $(document).ready(function(){
 //
@@ -218,15 +225,19 @@ console.log( $('.hex-grid').width() , maxW, maxW * settings.maxRowItems);
             borderRight: ( hexW / 2 ) + "px solid transparent",
          });
 
+
+         var color = colores[ Math.floor( Math.random() * colores.length ) ];
+
          hex.find('.middle').css({
-            height: ( ( hexW / 2 ) / Math.sqrt(3) ) * 2
+            height: ( ( hexW / 2 ) / Math.sqrt(3) ) * 2,
+            backgroundColor: color
          });
 
          hex.find('.pre').css({
-            borderBottom: ( hexW / 2 ) / Math.sqrt(3) + "px solid #38c12d",
+            borderBottom: ( hexW / 2 ) / Math.sqrt(3) + "px solid " + color,
          });
          hex.find('.post').css({
-            borderTop: ( hexW / 2 ) / Math.sqrt(3) + "px solid #38c12d",
+            borderTop: ( hexW / 2 ) / Math.sqrt(3) + "px solid " + color,
          });
 
 
