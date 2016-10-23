@@ -89,7 +89,7 @@ gulp.task('js', function() {
    // .pipe(jshint.reporter('default'))
    .pipe(concat( config.projectName + '.min.js'))
    // .pipe(concat( config.projectName + '.min.js'))
-   // .pipe(uglify())
+   .pipe(uglify())
    .pipe(gulp.dest('dist/assets/js'))
    // .pipe(rename({suffix: '.min'}))
    // .pipe(gulp.dest('dist/assets/js'))
