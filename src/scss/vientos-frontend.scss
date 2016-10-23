@@ -197,3 +197,79 @@ $color_concepto_6: #daeafa;
 h1,h2,h3,h4,h5,h6 {
    @extend .font-1;
 }
+
+
+
+
+
+
+/* HEXGRID */
+
+
+
+.hexagon {
+  position: relative;
+  width: 300px;
+  height: 173.21px;
+  background-color: #64C7CC;
+  margin: 0 0 86.60px 0;
+  float: left;
+
+}
+
+.hexagon .pre,
+.hexagon .post {
+
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 150px solid #fff;
+  border-right: 150px solid #fff;
+}
+
+.hexagon .contents{
+  top: 0;
+   left: 0;
+   width: 100%;
+   position: absolute;
+}
+
+.hexagon .middle {
+
+  height: 173.20px;
+}
+
+.hexagon .pre {
+  bottom: 100%;
+  border-bottom: 86.60px solid #fff;
+}
+
+.hexagon .post {
+  top: 100%;
+  width: 0;
+  border-top: 86.60px solid #fff;
+}
+
+.hexagon-row {
+   clear: left;
+}
+
+.hexagon-row {
+   margin-left: 150px;
+   margin-bottom: 100px;
+}
+
+.hexagon-row.even {
+   margin-left: 0;
+}
+
+.hex-grid * {
+   position: relative;;
+}
+
+
+
+
+.lh1 {
+line-height: 1;
+}

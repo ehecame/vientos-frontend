@@ -2,6 +2,7 @@
 function Vientos() {
 
    var v = this;
+   var hexgrid;
 
    this.setup_pre_ready = function() {
 
@@ -22,6 +23,12 @@ function Vientos() {
       u.addWindowResizeFunction( u.shareH );
       u.addWindowResizeFunction( u.squareH );
       u.addWindowResizeFunction( u.verticalCenter );
+
+      this.hexgrid = new HexGrid();
+      this.hexgrid.addContents( $('#inicio-colaboracion-palabras .palabra-colaboracion').detach() );
+      u.verticalCenter();
+
+
       u.addWindowResizeFunction( function() {
 //    checa ventana
 //    si es movil
@@ -76,7 +83,7 @@ function Vientos() {
                   v.categorias_fade_in();
 
                }
-               if( u.isElementInView( $('html,body'), $('#inicio-colaboracion-conceptos') ) ) {
+               if( u.isElementInView( $('html,body'), $('#inicio-colaboracion-palabras') ) ) {
 
                   v.animarConceptosColaboracion();
 
@@ -115,38 +122,38 @@ function Vientos() {
    }
 
    this.animarConceptosColaboracion = function() {
-      var conceptos = $('.concepto-colaboracion');
-
-      conceptos.hide();
-
-      var canvasW = $(window).width();
-      var canvasH = $(window).height() / 2;
-      $('#inicio-colaboracion-conceptos').height( canvasH );
-      $('#inicio-colaboracion-conceptos').css({ position: 'relative' });
-      fonts = ['font-xs','font-s','font-m','font-l','font-xl'];
-      colors = [
-         'concepto-color-1','concepto-color-2','concepto-color-3',
-         'concepto-color-4','concepto-color-5','concepto-color-6',
-      ];
-      setInterval(function(){
-
-         var concepto = conceptos.eq( Math.floor(Math.random()*conceptos.length) );
-
-         concepto.addClass("abs");
-         concepto.css({
-            top: Math.random() * canvasH / 2,
-            left: Math.random() * canvasW / 2,
-            width: 150+Math.random()*($(window).width()/4),
-         });
-
-         concepto.addClass( fonts[Math.floor(Math.random()*fonts.length)] );
-         concepto.addClass( colors[Math.floor(Math.random()*colors.length)] );
-
-         concepto.fadeIn(300,function(){
-            concepto.fadeOut(7500)
-         })
-
-      }, 2500 )
+      // var conceptos = $('.concepto-colaboracion');
+      //
+      // conceptos.hide();
+      //
+      // var canvasW = $(window).width();
+      // var canvasH = $(window).height() / 2;
+      // $('#inicio-colaboracion-conceptos').height( canvasH );
+      // $('#inicio-colaboracion-conceptos').css({ position: 'relative' });
+      // fonts = ['font-xs','font-s','font-m','font-l','font-xl'];
+      // colors = [
+      //    'concepto-color-1','concepto-color-2','concepto-color-3',
+      //    'concepto-color-4','concepto-color-5','concepto-color-6',
+      // ];
+      // setInterval(function(){
+      //
+      //    var concepto = conceptos.eq( Math.floor(Math.random()*conceptos.length) );
+      //
+      //    concepto.addClass("abs");
+      //    concepto.css({
+      //       top: Math.random() * canvasH / 2,
+      //       left: Math.random() * canvasW / 2,
+      //       width: 150+Math.random()*($(window).width()/4),
+      //    });
+      //
+      //    concepto.addClass( fonts[Math.floor(Math.random()*fonts.length)] );
+      //    concepto.addClass( colors[Math.floor(Math.random()*colors.length)] );
+      //
+      //    concepto.fadeIn(300,function(){
+      //       concepto.fadeOut(7500)
+      //    })
+      //
+      // }, 2500 )
 
    }
 
