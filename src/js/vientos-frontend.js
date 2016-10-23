@@ -1,4 +1,20 @@
+var lista_categorias = [
+   'Consumo Ético',
+   'Medio Ambiente',
+   'Arte y Cultura',
+   'Derechos Humanos',
+   'Género',
+   'Vivienda',
+   'Salud',
+   'Red',
+   'Alimentación',
+   'Vestido',
+   'Tecnología',
+   'Educación',
+   'Comunicación',
+   'Transporte',
 
+];
 
 // js_utils de kernspaltung!
 u = new Utils();
@@ -23,9 +39,11 @@ $(document).ready(function(){
 
    var categoria = $('#inicio-categorias .listado .category');
 
-   for (var i = 0; i < 12; i++) {
+   for (var i = 0; i < 14; i++) {
 
-      categoria.clone().appendTo('#inicio-categorias .listado .container');
+      categoria.clone().appendTo('#inicio-categorias .listado .container').find('.catLabel').html(
+         lista_categorias[i]
+      ).removeClass('hidden');
 
    }
 
@@ -47,6 +65,6 @@ function categoryIconClicked () {
 
 
 jQuery.fn.random = function() {
-    var randomIndex = Math.floor(Math.random() * this.length);
-    return jQuery(this[randomIndex]);
+   var randomIndex = Math.floor(Math.random() * this.length);
+   return jQuery(this[randomIndex]);
 };
