@@ -1,20 +1,20 @@
-var lista_categorias = [
-   'Consumo Ético',
-   'Medio Ambiente',
-   'Arte y Cultura',
-   'Derechos Humanos',
-   'Género',
-   'Vivienda',
-   'Salud',
-   'Red',
-   'Alimentación',
-   'Vestido',
-   'Tecnología',
-   'Educación',
-   'Comunicación',
-   'Transporte',
-
-];
+// var lista_categorias = [
+//    'Consumo Ético',
+//    'Medio Ambiente',
+//    'Arte y Cultura',
+//    'Derechos Humanos',
+//    'Género',
+//    'Vivienda',
+//    'Salud',
+//    'Red',
+//    'Alimentación',
+//    'Vestido',
+//    'Tecnología',
+//    'Educación',
+//    'Comunicación',
+//    'Transporte',
+//
+// ];
 
 // js_utils de kernspaltung!
 u = new Utils();
@@ -37,17 +37,17 @@ $(document).ready(function(){
    }
 
 
-   var categoria = $('#inicio-categorias .listado .category');
-
-   for (var i = 0; i < 14; i++) {
-
-      categoria.clone().appendTo('#inicio-categorias .listado .container').find('.catLabel').html(
-         lista_categorias[i]
-      ).removeClass('hidden');
-
-   }
-
-   elemento = $('.inicio-actores-desglose-elemento');
+   // var categoria = $('#inicio-categorias .listado .category');
+   //
+   // for (var i = 0; i < 14; i++) {
+   //
+   //    categoria.clone().appendTo('#inicio-categorias .listado .container').find('.catLabel').html(
+   //       lista_categorias[i]
+   //    ).removeClass('hidden');
+   //
+   // }
+   //
+   // elemento = $('.inicio-actores-desglose-elemento');
 
    // for (var i = 0; i < 2; i++) {
    //    elemento.clone().appendTo('#inicio-actores-desglose');

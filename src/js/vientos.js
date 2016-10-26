@@ -1,28 +1,28 @@
-
-
-var lista_palabras_colaboracion = [
-'Entérate',
-'Difunde',
-'Conocimientos',
-'Habilidades',
-'Trabajo Comunitario',
-'Materiales',
-'Herramientas',
-'Eventos',
-'Talleres',
-'Espacios',
-'Chambas',
-'Fondeo',
-'Productos',
-'Servicios',
-'Recomienda',
-'Vincula',
-'Comparte',
-'Construye',
-'Intercambia',
-'Asiste',
-'Cotorréate'
-];
+// 
+//
+// var lista_palabras_colaboracion = [
+// 'Entérate',
+// 'Difunde',
+// 'Conocimientos',
+// 'Habilidades',
+// 'Trabajo Comunitario',
+// 'Materiales',
+// 'Herramientas',
+// 'Eventos',
+// 'Talleres',
+// 'Espacios',
+// 'Chambas',
+// 'Fondeo',
+// 'Productos',
+// 'Servicios',
+// 'Recomienda',
+// 'Vincula',
+// 'Comparte',
+// 'Construye',
+// 'Intercambia',
+// 'Asiste',
+// 'Cotorréate'
+// ];
 
 function Vientos() {
 
@@ -191,13 +191,13 @@ console.log("palabras animacion");
 
    this.palabras_colaboracion = function( callback ) {
 
-      for (var i = 0; i < lista_palabras_colaboracion.length; i++) {
-
-         $('.palabra-colaboracion-contenedor').first()
-         .clone().appendTo('#inicio-colaboracion-palabras').removeClass('hidden')
-         .html( lista_palabras_colaboracion[i] )
-
-      }
+      // for (var i = 0; i < lista_palabras_colaboracion.length; i++) {
+      //
+      //    $('.palabra-colaboracion-contenedor').first()
+      //    .clone().appendTo('#inicio-colaboracion-palabras').removeClass('hidden')
+      //    .html( lista_palabras_colaboracion[i] )
+      //
+      // }
 
       callback();
 
